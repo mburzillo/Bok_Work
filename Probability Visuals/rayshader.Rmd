@@ -601,7 +601,7 @@ for (i in seq(1, n_frames)) {
 
 ```{r create gradual_build_gif, echo = FALSE, warning = FALSE, message = FALSE}
 # create gif!
-img_frames <- paste0("./ray_images/gradual_build/gradual_build_", seq_len(n_frames), ".png")
+img_frames <- paste0("./ray_images/gradual_build/gradual_build_", seq_len(n_frames - 1), ".png")
 image_write_gif(magick::image_read(img_frames), 
                         path = "./ray_gifs/gradual_build.gif", 
                         delay = .5)
